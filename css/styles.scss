@@ -1,0 +1,146 @@
+/* Import fonts */
+/* Import fonts locally */
+@font-face {
+  font-family: "Tilda Sans Regular";
+  src: url("/fonts/TildaSans-Regular.woff2") format("woff2"),
+    url("/fonts/TildaSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1vw;
+}
+
+/* Body styles */
+body {
+  background-color: #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 315vh;
+  width: 120vw;
+  font-family: 'XANO-mincho-U32';
+}
+
+$box-shadow: 0.2em 0.2em 0.5em -0.2em rgba(137, 137, 137, 0.522);
+$container-padding: 5rem 3rem;
+$container-background-color: #ececec;
+$select-shadow: inset 3em 0 1em -1em rgba(201, 201, 201, 0.3), inset 1em 0 1em -1em rgb(7, 77, 198) !important;
+$header-color: gray;
+$container-width: 42vw;
+$container-height: 80vh;
+$container-transform-style: preserve-3d;
+$container-transform-origin: left;
+$container-overflow: visible;
+$container-transition: box-shadow 1s ease;
+
+.container {
+  position: fixed;
+  z-index: 2;
+  background-color: #c5f3a8;
+  left: 50vw;
+  top: 5rem;
+  width: 33vw;
+  max-width: 400px;
+  height: 80vh;
+  transform-style: $container-transform-style;
+  transform-origin: $container-transform-origin;
+  box-shadow: $box-shadow, inset 1em 0 1em -1em rgb(38, 168, 49);
+  transition: $container-transition;
+  cursor: pointer;
+
+  h1 {
+    font-size: 5rem;
+    margin: 1rem 2rem;
+    letter-spacing: 0.2rem;
+    color: $header-color;
+    font-family: 'Herbik Unlicensed Trial';
+    line-height: 0.9;
+  }
+
+  p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.selected {
+  box-shadow: $select-shadow;
+  cursor: move;
+}
+
+.rotating-letter {
+  transform: rotate(-45deg);
+}
+
+.container2,
+.container3 {
+  position: fixed;
+  left: 50vw;
+  top: 5rem;
+  background-color: $container-background-color;
+  width: $container-width;
+  height: $container-height;
+  max-width: 500px;
+  padding: $container-padding;
+  transform-style: $container-transform-style;
+  transform: translateZ(100vh);
+  transform-origin: $container-transform-origin;
+  overflow-y: hidden;
+  overflow: $container-overflow;
+  box-shadow: $box-shadow, inset 3em 0 1em -1em rgba(201, 201, 201, 0.3);
+  transition: $container-transition;
+  cursor: pointer;
+
+  p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .title {
+    position: absolute;
+    top: 7rem;
+    right: -3rem;
+    font-size: 2rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotateX(180deg) rotate(180deg);
+    background-color: $container-background-color;
+    border-radius: 5%;
+    font-family: 'Helvetica';
+    color: $header-color;
+    padding: 1rem 0;
+    padding-right: 2rem;;
+  }
+}
+
+.container3 {
+
+  .title {
+    top: 19rem;
+    right: -3rem;
+    font-size: 2rem;
+    border-radius: 20%;
+    font-family: 'Helvetica';
+    padding: 1rem 0;
+    padding-right: 2rem;;
+  }
+.title2{
+  top: 29rem;
+  border-radius: 1%;
+}
+}
+

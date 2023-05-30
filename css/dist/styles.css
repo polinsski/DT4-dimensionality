@@ -1,0 +1,126 @@
+/* Import fonts */
+/* Import fonts locally */
+@font-face {
+  font-family: "Tilda Sans Regular";
+  src: url("/fonts/TildaSans-Regular.woff2") format("woff2"), url("/fonts/TildaSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1vw;
+}
+
+/* Body styles */
+body {
+  background-color: #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 315vh;
+  width: 120vw;
+  font-family: "XANO-mincho-U32";
+}
+
+.container {
+  position: fixed;
+  z-index: 2;
+  background-color: #c5f3a8;
+  left: 50vw;
+  top: 5rem;
+  width: 33vw;
+  max-width: 400px;
+  height: 80vh;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  box-shadow: 0.2em 0.2em 0.5em -0.2em rgba(137, 137, 137, 0.522), inset 1em 0 1em -1em #26a831;
+  transition: box-shadow 1s ease;
+  cursor: pointer;
+}
+.container h1 {
+  font-size: 5rem;
+  margin: 1rem 2rem;
+  letter-spacing: 0.2rem;
+  color: gray;
+  font-family: "Herbik Unlicensed Trial";
+  line-height: 0.9;
+}
+.container p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.selected {
+  box-shadow: inset 3em 0 1em -1em rgba(201, 201, 201, 0.3), inset 1em 0 1em -1em #074dc6 !important;
+  cursor: move;
+}
+
+.rotating-letter {
+  transform: rotate(-45deg);
+}
+
+.container2,
+.container3 {
+  position: fixed;
+  left: 50vw;
+  top: 5rem;
+  background-color: #ececec;
+  width: 42vw;
+  height: 80vh;
+  max-width: 500px;
+  padding: 5rem 3rem;
+  transform-style: preserve-3d;
+  transform: translateZ(100vh);
+  transform-origin: left;
+  overflow-y: hidden;
+  overflow: visible;
+  box-shadow: 0.2em 0.2em 0.5em -0.2em rgba(137, 137, 137, 0.522), inset 3em 0 1em -1em rgba(201, 201, 201, 0.3);
+  transition: box-shadow 1s ease;
+  cursor: pointer;
+}
+.container2 p,
+.container3 p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.container2 .title,
+.container3 .title {
+  position: absolute;
+  top: 7rem;
+  right: -3rem;
+  font-size: 2rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotateX(180deg) rotate(180deg);
+  background-color: #ececec;
+  border-radius: 5%;
+  font-family: "Helvetica";
+  color: gray;
+  padding: 1rem 0;
+  padding-right: 2rem;
+}
+
+.container3 .title {
+  top: 19rem;
+  right: -3rem;
+  font-size: 2rem;
+  border-radius: 20%;
+  font-family: "Helvetica";
+  padding: 1rem 0;
+  padding-right: 2rem;
+}
+.container3 .title2 {
+  top: 29rem;
+  border-radius: 1%;
+}
